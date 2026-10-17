@@ -12,7 +12,7 @@ class Vector:
         return Vector(a - b for a, b in zip(self.coords, other.coords))
         
     def __str__(self):
-        return f'Vector x={self.x} y={self.y}'
+        return "(" + ", ".join(str(c) for c in self.coords) + ")"
 
     def __mul__(self, k):
         return Vector(a * k for a in self.coords)
