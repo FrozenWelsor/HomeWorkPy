@@ -10,6 +10,9 @@ class Vector:
 
     def __sub__(self, other):
         return Vector(a - b for a, b in zip(self.coords, other.coords))
+        
+    def __str__(self):
+        return f'Vector x={self.x} y={self.y}'
 
     def __mul__(self, k):
         return Vector(a * k for a in self.coords)
